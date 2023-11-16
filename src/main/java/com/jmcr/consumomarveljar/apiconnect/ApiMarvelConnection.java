@@ -16,7 +16,7 @@ public class ApiMarvelConnection {
 	 * instance of RestTemplate to connect to API Marvel
 	 */
 	@Autowired
-	private RestTemplate restTemplate;
+	private RestTemplate restTemplate = new RestTemplate();
 
 	/**
 	 * Instance of Variable Connection
@@ -56,13 +56,13 @@ public class ApiMarvelConnection {
 	 */
 	private String generateURL(int heroCode, int limit, int offset) {
 		var finalURL = new StringBuilder();
-		finalURL.append(variableConfig.getUrlCharacters());
+		finalURL.append("https://gateway.marvel.com:443/v1/public/characters");
 		if (heroCode > 0) {
 			finalURL.append("/" + heroCode);
 		}
-		finalURL.append("?ts=" + variableConfig.getTs());
-		finalURL.append("&apikey=" + variableConfig.getApiKey());
-		finalURL.append("&hash=" + variableConfig.getHash());
+		finalURL.append("?ts=" + "1");
+		finalURL.append("&apikey=" + "312bc8c97d76ebd8b8dff605ea3381bf");
+		finalURL.append("&hash=" + "948d7e7f59fd4e1afaa31c0045910bdd");
 		if (limit > 0) {
 			finalURL.append("&limit=" + limit);
 		}

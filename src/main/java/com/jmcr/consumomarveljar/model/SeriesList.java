@@ -41,5 +41,5 @@ public class SeriesList {
 	 * The list of returned series in this collection.
 	 */
 	@JsonProperty("items")
-    public List<SeriesList> items;
+    public List<SeriesSummary> items;
 }
