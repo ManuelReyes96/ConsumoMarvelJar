@@ -1,6 +1,6 @@
 package com.jmcr.consumomarveljar.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -41,5 +41,5 @@ public class EventList {
 	 * The list of returned events in this collection.
 	 */
 	@JsonProperty("items")
-    public ArrayList<EventsSummary> items;
+    public List<EventsSummary> items;
 }

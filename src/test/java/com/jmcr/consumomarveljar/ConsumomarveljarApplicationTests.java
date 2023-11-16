@@ -1,10 +1,12 @@
 package com.jmcr.consumomarveljar;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * Class ConsumomarveljarApplicationTests generate a basic test
+ * Class ConsumomarveljarApplicationTests generate a basic test 
  * Using Junit 5
  */
 @SpringBootTest
@@ -15,7 +17,7 @@ class ConsumomarveljarApplicationTests {
 	 */
 	@Test
 	void contextLoads() {
-		ConsumoMarvelJarApplication.main(new String[] {});
+		assertDoesNotThrow(() -> ConsumoMarvelJarApplication.main(new String[] {}));
 	}
 
 }

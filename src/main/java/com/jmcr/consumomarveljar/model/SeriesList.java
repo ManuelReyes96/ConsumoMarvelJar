@@ -1,6 +1,6 @@
 package com.jmcr.consumomarveljar.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -41,5 +41,5 @@ public class SeriesList {
 	 * The list of returned series in this collection.
 	 */
 	@JsonProperty("items")
-    public ArrayList<SeriesList> items;
+    public List<SeriesList> items;
 }

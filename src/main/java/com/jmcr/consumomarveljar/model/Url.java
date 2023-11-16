@@ -27,5 +27,5 @@ public class Url {
 	 * A full URL (including scheme, domain, and path).
 	 */
 	@JsonProperty("url")
-    public String url;
+    public String fullUrl;
 }

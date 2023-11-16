@@ -1,6 +1,6 @@
 package com.jmcr.consumomarveljar.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -53,7 +53,7 @@ public class Character {
 	 * A set of public web site URLs for the resource.
 	 */
 	@JsonProperty("urls")
-	public ArrayList<Url> urls;
+	public List<Url> urls;
 	
 	/**
 	 * The representative image for this character.

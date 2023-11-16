@@ -2,11 +2,9 @@ package com.jmcr.consumomarveljar.apiconnect;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.jmcr.consumomarveljar.apiconnect.data.VariableConfig;
-import com.jmcr.consumomarveljar.model.CharacterDataContainer;
 import com.jmcr.consumomarveljar.model.CharacterDataWrapper;
 
 /**
@@ -57,7 +55,7 @@ public class ApiMarvelConnection {
 	 * @return url created
 	 */
 	private String generateURL(int heroCode, int limit, int offset) {
-		StringBuilder finalURL = new StringBuilder();
+		var finalURL = new StringBuilder();
 		finalURL.append(variableConfig.getUrlCharacters());
 		if (heroCode > 0) {
 			finalURL.append("/" + heroCode);

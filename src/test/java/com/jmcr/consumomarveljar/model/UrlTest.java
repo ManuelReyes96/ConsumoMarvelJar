@@ -23,9 +23,9 @@ class UrlTest {
 	void testModel() {
 		url = new Url();
 		url.setType("0");
-		url.setUrl("0");
+		url.setFullUrl("0");
 		
 		assertNotNull(url.getType());
-		assertNotNull(url.getUrl());
+		assertNotNull(url.getFullUrl());
 	}
 }
