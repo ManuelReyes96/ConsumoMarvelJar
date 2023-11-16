@@ -7,6 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.jmcr.consumomarveljar.apiconnect.data.VariableConfig;
 import com.jmcr.consumomarveljar.model.CharacterDataContainer;
+import com.jmcr.consumomarveljar.model.CharacterDataWrapper;
 
 /**
  * Class ApiMarvelConnection for connect to API Marvel
@@ -31,9 +32,9 @@ public class ApiMarvelConnection {
 	 * @param offset skip an specific number of characters
 	 * @return a character list
 	 */
-	public CharacterDataContainer getCharacters(int limit, int offset) {
-		ResponseEntity<CharacterDataContainer> response = restTemplate.getForEntity(generateURL(0, limit, offset),
-				CharacterDataContainer.class);
+	public CharacterDataWrapper getCharacters(int limit, int offset) {
+		ResponseEntity<CharacterDataWrapper> response = restTemplate.getForEntity(generateURL(0, limit, offset),
+				CharacterDataWrapper.class);
 		return response.getBody();
 	}
 
@@ -42,9 +43,9 @@ public class ApiMarvelConnection {
 	 * @param heroCode character id
 	 * @return a character
 	 */
-	public CharacterDataContainer getCharacterById(int heroCode) {
-		ResponseEntity<CharacterDataContainer> response = restTemplate.getForEntity(generateURL(heroCode, 0, 0),
-				CharacterDataContainer.class);
+	public CharacterDataWrapper getCharacterById(int heroCode) {
+		ResponseEntity<CharacterDataWrapper> response = restTemplate.getForEntity(generateURL(heroCode, 0, 0),
+				CharacterDataWrapper.class);
 		return response.getBody();
 	}
 
